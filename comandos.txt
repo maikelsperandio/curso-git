@@ -1,0 +1,46 @@
+#Git comands
+
+# Possíveis estados do git:
+working directory, index e HEAD
+	working directory representa o estado atual dos arquivos no repositório. Podemos utilizar o comando git add para adicioná-los ao index, ou staging area, que representa uma visão preliminar das modificações que queremos definir para nosso projeto, comparando essas ao HEAD, o último passo completo do nosso projeto, que serve de referência para comparação do trabalho com o working directory.
+
+# Transforma um diretório comum em um repositório git
+git init
+
+# Lista os arquivos e diretórios que são controlados pelo git
+git ls-files
+
+# Exibe o status dos arquivos do projeto
+git status
+
+# Adiciona configurações de usuário, pode-se incluir o atributo --global pra funcionar para todos os repositórios
+git config user.name "Maikel Sperandio"
+git config user.email "maikelsperandio@gmail.com"
+
+# Adiciona arquivos ao git
+git add -v .
+git add arquivo1 arquivo2
+git add caminhoDeUmDiretorio
+
+# Faz o commit, o parâmetro -m é a mensagem de commit
+git commit -m "Mensagem de commit" -v .
+
+# Exibe os repositórios remotos configurados no git local
+git remote
+git remote -v
+
+# Adiciona ao git um repositório remoto
+git remote add [alias_do_repositorio] [uri_do_repositorio]
+git remote add origin https://github.com/[seu_nome_de_usuario]/curso-git.git # Origin é o nome do repositório
+
+# Faz o envio dos arquivos para um repositório remoto identificado por "origin"
+git push origin master
+	Outra alternativa é utilizar, no primeiro push, a opção -u ou --set-upstream. Ela atrela a branch remota à local, fazendo com que não seja mais necessário passar como parâmetros a origem e a branch no comando push, que fica então assim: git push.
+
+# Exibe o log dos commits feitos
+git log
+
+# Exibe o log mais detalhado dos commits
+git whatchanged
+git whatchanged -p # Exibe quais linhas foram alteradas
+
