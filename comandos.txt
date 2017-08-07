@@ -44,3 +44,12 @@ git log
 git whatchanged
 git whatchanged -p # Exibe quais linhas foram alteradas
 
+# Exibe as branches existentes no repositório
+git branch
+
+# Cria uma nova branch chamada design
+git branch design
+
+# Muda a branch de trabalho
+git checkout design
+
